@@ -1,9 +1,9 @@
 name: Method 1- Copy Files via SSH to Windows Server
 
 on:
-  # push:
-  #   branches:
-  #     - main
+  push:
+    branches:
+      - master
 
   workflow_dispatch:
 
