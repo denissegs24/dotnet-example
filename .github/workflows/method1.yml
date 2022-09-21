@@ -46,10 +46,9 @@ jobs:
           host: ${{secrets.HOST}}
           user: ${{secrets.USER}}
           password: ${{secrets.PASSWORD}}
-          ssh_options: -o StrictHostKeyChecking=no
           pre_upload: rmdir /s /q public
           post_upload: iisreset /stop && xcopy /s /y public C:\inetpub\wwwroot\ && iisreset /start
-      
+          ssh_options: -o StrictHostKeyChecking=no
 
       # - name: Upload to Artifact
       #   run: |
